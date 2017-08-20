@@ -1,7 +1,9 @@
 <?php
 /*theme setup
 */
-require_once (dirname(__FILE__) . '/theme-options/theme-options.php');
+//require_once (dirname(__FILE__) . '/theme-options/theme-options.php');
+//my options
+require_once (dirname(__FILE__) . '/options/global_settings.php');
 require_once (dirname(__FILE__) . '/redux/barebones-config.php');
 require_once('wp-bootstrap-navwalker/wp-bootstrap-navwalker.php');
 vc_set_as_theme( $disable_updater = true );
@@ -57,4 +59,5 @@ function theme_wp_script(){
         'script', get_template_directory_uri() . '/assets/assets/theme/js/script.js', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'theme_wp_script');
+
 ?>
